@@ -1,0 +1,8 @@
+runtime: java17
+service: agent
+entrypoint: java -jar agent-all.jar
+handlers:
+  - url: /.*
+    secure: always
+    redirect_http_response_code: 301
+    script: auto
